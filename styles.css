@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -13,8 +13,10 @@ body {
 
 .container {
     width: 80%;
-    margin: auto;
-    overflow: hidden;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 /* Header Section */
@@ -28,12 +30,15 @@ body {
 }
 
 .logo h1 {
+    font-size: 28px;
     margin-left: 20px;
+    
 }
 
 .nav-links {
     list-style: none;
     display: flex;
+    
 }
 
 .nav-links li {
@@ -44,79 +49,154 @@ body {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f39c12;
 }
 
 /* Hero Section */
 .hero {
+    background: linear-gradient(135deg, #4A90E2, #50E3C2);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
     display: flex;
-    justify-content: space-between;
-    padding: 50px 0;
-    background-color: #ecf0f1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.hero-content h2 {
+.hero h2 {
     font-size: 48px;
     margin-bottom: 20px;
 }
 
-.hero-content p {
+.hero p {
     font-size: 18px;
-    margin-bottom: 30px;
-}
-
-.hero-image img {
-    max-width: 100%;
-    border-radius: 10px;
+    margin-bottom: 40px;
 }
 
 .cta-btn {
-    background-color: #f39c12;
-    padding: 10px 25px;
-    border-radius: 5px;
+    background-color: #FF6F61;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-size: 18px;
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .cta-btn:hover {
-    background-color: #e67e22;
+    background-color: #FF4F40;
+    transform: scale(1.05);
 }
 
 /* About Section */
 .about {
-    padding: 60px 0;
     background-color: white;
+    padding: 60px 0;
     text-align: center;
+}
+
+.about h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
 }
 
 .about p {
     font-size: 18px;
-    max-width: 70%;
+    max-width: 800px;
     margin: 0 auto;
     line-height: 1.6;
 }
 
 /* Services Section */
 .services {
-    padding: 60px 0;
     background-color: #ecf0f1;
+    padding: 60px 0;
     text-align: center;
 }
 
+.services h2 {
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+
 .service-box {
-    width: 30%;
     display: inline-block;
-    margin: 20px 1%;
+    width: 30%;
+    background-color: white;
     padding: 20px;
-    background: white;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     vertical-align: top;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .service-box img {
     width: 100%;
-    border-radius: 5px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.service-box h3 {
+    font-size: 22px;
+    color: #34495e;
+}
+
+.service-box p {
+    font-size: 16px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.testimonial-box {
+    width: 30%;
+    display: inline-block;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.testimonial-box img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 15px;
+}
+
+.testimonial-box p {
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.testimonial-box h4 {
+    margin-top: 10px;
+    clear: both;
+    font-weight: normal;
 }
 
 /* Call to Action Section */
@@ -128,35 +208,19 @@ body {
 }
 
 .cta-section .cta-btn {
-    background-color: white;
-    color: #2ecc71;
+    background-color: #FF6F61;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .cta-section .cta-btn:hover {
-    background-color: #ecf0f1;
-}
-
-/* Testimonials Section */
-.testimonials {
-    padding: 60px 0;
-    background-color: white;
-    text-align: center;
-}
-
-.testimonial-box {
-    width: 30%;
-    display: inline-block;
-    margin: 20px 1%;
-    padding: 20px;
-    background: #f4f4f4;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial-box img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+    background-color: #FF4F40;
+    transform: scale(1.05);
 }
 
 /* Footer Section */
@@ -167,13 +231,82 @@ body {
     text-align: center;
 }
 
-.footer-links a {
-    color: #f39c12;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
 .footer p {
     margin-top: 10px;
     font-size: 14px;
+}
+/* Contact Section */
+.contact {
+    padding: 60px 0;
+    background-color: #ecf0f1;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: #34495e;
+}
+
+.contact p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #7f8c8d;
+}
+
+.contact-info {
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #2c3e50;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    color: #34495e;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form button {
+    padding: 15px 30px;
+    background-color: #FF6F61;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #FF4F40;
 }
